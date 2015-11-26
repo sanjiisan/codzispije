@@ -1,0 +1,32 @@
+{
+  "name": "hunger-programmer",
+  "version": "0.0.1",
+  "description": "Blog",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjiisan/hunger-programmer.git"
+  },
+  "keywords": [
+    "blog",
+    "life",
+    "sense",
+    "it",
+    "projects"
+  ],
+  "author": "Pawel Wojcik <sanjiisan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanjiisan/hunger-programmer/issues"
+  },
+  "homepage": "https://github.com/sanjiisan/hunger-programmer#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.1.0"
+  }
+}

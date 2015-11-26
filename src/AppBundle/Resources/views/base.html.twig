@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('') }}"/>
+{% endblock %}
+
+{% block body %}
+    {% import '@App/Base/header.html.twig' %}
+    {% block content %}
+    {% endblock %}
+    {% import '@App/Base/footer.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

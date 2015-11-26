@@ -1,0 +1,35 @@
+{
+  "name": "hunger-programmer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sanjiisan/hunger-programmer",
+  "authors": [
+    "Pawel Wojcik <pawel.wojcik@obido.pl>"
+  ],
+  "description": "Blog about programming, private projects and life sense.",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "blog",
+    "private",
+    "projects",
+    "life",
+    "sense"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "bootstrap-sass": "~3.3.5"
+  }
+}
