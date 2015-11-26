@@ -1,0 +1,31 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+    <script>
+        $(function() {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+{% endblock %}
+
+{% block sonata_sidebar_search %}
+    <br/>
+{% endblock %}
+
+{% block side_bar_after_nav %}
+    <p class="text-center small" style="border-top: 1px solid #444444; padding-top: 10px">
+        <a href="https://obido.pl" rel="noreferrer" target="_blank">obido</a>
+    </p>
+{% endblock %}
+
+{% block meta_tags %}
+    {{ parent() }}
+{% endblock %}

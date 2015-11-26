@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="drink")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\DrinkRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Drink
 {
@@ -56,6 +57,18 @@ class Drink
      */
     private $updatedAt;
 
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function generateDates()
+    {
+        if (!$this->getCreatedAt()) {
+            $this->setCreatedAt(new \DateTime);
+        }
+
+        $this->setUpdatedAt(new \DateTime);
+    }
 
     /**
      * Get id

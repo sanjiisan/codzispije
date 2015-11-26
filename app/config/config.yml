@@ -58,6 +58,20 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+#SONATA BLOCKS
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+
+# Sonata
+sonata_admin:
+    title:  Co dzis pije ADMIN
+    templates:
+        layout:                         AppBundle::standard_layout.html.twig
+        user_block:                     AppBundle:Core:user_block.html.twig
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

@@ -10,4 +10,5 @@
 /vendor/
 /.idea/
 /bin/
+/bower_components/
 /composer.phar

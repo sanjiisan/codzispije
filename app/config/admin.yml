@@ -1,0 +1,6 @@
+services:
+    admin.category:
+        class: AppBundle\Admin\DrinkAdmin
+        arguments: [~, AppBundle\Entity\Drink, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: Drink }
