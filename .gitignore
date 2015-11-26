@@ -10,6 +10,7 @@
 /vendor/
 /.idea/
 /bin/
+/web/lib/
 /bower_components/
 /node_modules/
 /composer.phar

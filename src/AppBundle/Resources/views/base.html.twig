@@ -1,15 +1,17 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('') }}"/>
+    <link rel="stylesheet" href="{{ asset('lib/bootstrap/dist/css/bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}"/>
 {% endblock %}
 
 {% block body %}
-    {% import '@App/Base/header.html.twig' %}
+    {% include '@App/Base/header.html.twig' %}
     {% block content %}
     {% endblock %}
-    {% import '@App/Base/footer.html.twig' %}
+    {% include '@App/Base/footer.html.twig' %}
 {% endblock %}
 
 {% block javascripts %}
+    <script type="text/javascript" src="{{ asset('lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 {% endblock %}
