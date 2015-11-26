@@ -9,7 +9,6 @@
 }
 
 .starter-template p {
-    margin-top: 50px;
     font-size: 20px;
     width: 75%;
     text-align: center;
@@ -17,7 +16,7 @@
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 60px;
