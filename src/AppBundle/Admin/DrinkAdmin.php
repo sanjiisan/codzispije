@@ -17,7 +17,7 @@ class DrinkAdmin extends Admin
         $formMapper
             ->add('title')
             ->add('image')
-            ->add('description', null, ['required' => false])
+            ->add('description', 'textarea', ['required' => false])
         ;
     }
 
