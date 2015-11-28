@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Drink;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends Controller
@@ -33,5 +34,24 @@ class IndexController extends Controller
             ]
         );
 
+    }
+
+    /**
+     * @Route("/like/{id}", name="like")
+     */
+    public function likeAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $drink = $this->getDoctrine()
+            ->getRepository('AppBundle:Drink')
+            ->find($id);
+
+
+        /** @var Drink $drink */
+        $drink->setLike($drink->getLike() + 1);
+
+        $em->flush();
+        return new JsonResponse(['status' => 'ok']);
     }
 }

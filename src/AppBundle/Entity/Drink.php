@@ -58,6 +58,13 @@ class Drink
     private $updatedAt;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="like_count", type="integer")
+     */
+    private $like = 0;
+
+    /**
      * @ORM\PrePersist()
      * @ORM\PreUpdate()
      */
@@ -198,6 +205,22 @@ class Drink
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLike()
+    {
+        return $this->like;
+    }
+
+    /**
+     * @param int $like
+     */
+    public function setLike($like)
+    {
+        $this->like = $like;
     }
 }
 
