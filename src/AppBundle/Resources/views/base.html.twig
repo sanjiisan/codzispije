@@ -13,7 +13,6 @@
 {% endblock %}
 
 {% block javascripts %}
-    {% if google_code %}
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="{{ asset('lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script>
@@ -25,5 +24,4 @@
         ga('create', '{{ google_code }}', 'auto');
         ga('send', 'pageview');
     </script>
-    {% endif %}
 {% endblock %}
